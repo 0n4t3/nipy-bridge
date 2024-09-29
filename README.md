@@ -7,7 +7,7 @@ Very much a work in progress, check back later.
 A Nostr to AT/Bluesky &amp; Activity Pub (coming soon) local bridge. This is a work in progress, but can be run on a PC or Android device and then added as a relay to a Nostr client.
 
 To Do (First)
-* Add Activity Pub support via Mastodon API
+* Create a version that'll post to AT & AP simultaniously
 * Write a better readme
 
 To Do (Later)
