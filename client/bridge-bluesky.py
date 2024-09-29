@@ -1,11 +1,13 @@
 import asyncio
 import websockets
 import json
+import re
 from atproto import Client, client_utils
 
 ## Creds:
 atname = "username.bsky.social" #enter your username on BlueSky
 atapi = "api-123-abc" #enter your app specific password
+
 
 async def handle_connection(websocket, path):
     try:
@@ -18,12 +20,13 @@ async def handle_connection(websocket, path):
                 if any(tag[0] == "e" for tag in tags):
                     continue #avoid bridging replies
 
-                content = data[1].get("content")
+                raw_content = data[1].get("content")
                 post_id = data[1].get("id")
+                content = re.sub(r'nostr:(\S+)', r'https://njump.me/\1', raw_content)
 
                 if content:
                     if len(content) > 300:
-                        at_post_long = (f"This post was bridged from Nostr to AT via a yet named bridge, however, the post exceeded the character limit. View the post at: https://njump.me/{post_id}") #BlueSky currently limits posts to 300 characters. Nostr does not.
+                        at_post_long = (f"This post was bridged from Nostr to AT via NIPY Bridge, however, the post exceeded the BlueSky character limit. View the post at: https://njump.me/{post_id}") #BlueSky currently limits posts to 300 characters. Nostr does not.
                         print(at_post_long)
                         at_post = content
                         client = Client()
