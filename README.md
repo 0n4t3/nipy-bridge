@@ -47,7 +47,7 @@ The NIPY Bridge is just a python script that can be run via console on PC or Ter
 
 ) If the post is not a reply, and is under the character limit, it takes the text of the post and posts it to your account on the other protocol.
 
-As it stands quote posts do get bridged over, but with nostr:nevent at the top instead of the post contents. I intend to replace that with an njump.me link instead so it's easier for people to see what you're sharing or talking about.
+As it stands quote posts do get bridged over, but with nostr:nevent instead of the quoted post's content. I intend to replace that with an njump.me link instead so it's easier for people to see what you're sharing or talking about.
 
 Embedded media (images, videos, etc) on the Nostr side will only show up as links on the BlueSky/AP side of things (e.g. https://example.com/tree.jpg instead of actually embedding the image in the post). It's not perfect, but it still works I guess.
 
