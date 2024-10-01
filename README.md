@@ -7,16 +7,11 @@ Very much a work in progress, check back later.
 A Nostr to AT/Bluesky &amp; Activity Pub (coming soon) local bridge. This is a work in progress, but can be run on a PC or Android device and then added as a relay to a Nostr client.
 
 To Do (First)
-* Create a version that'll post to AT & AP simultaniously
 * Write a better readme
-
-To Do (Later)
-* Seperate out post lengths for AT & Activity Pub
-* Verify cryptographic signatures so it can be remotely hosted
-
 
 To Do (potentially)
 * Get replies (or notifications of replies) from other networks on Nostr
+* Verify cryptographic signatures so it can be remotely hosted
 
 ## About & Use Case
 This script is designed to run as a local relay which allows a Nostr client to communicate with the BlueSky and Mastodon APIs. It's a bit different from the existing bridges such as [Mostr](https://mostr.pub/) or [Bridgy Fed](https://fed.brid.gy/) which duplicate your account on the respective other protocols. In most cases those bridges are exactly what you're looking for, and if those meet your needs check them out first. However, there are some pros and cons to this setup vs those bridges depending on the use case you're looking for.
