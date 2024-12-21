@@ -34,7 +34,7 @@ Quote posts do get bridged over, but with an njump.me link instead of the quoted
 ## Installation
 1: Navigate to the scripts folder and download your preferred script (Only AP via the Mastodon API, only AT via the BlueSky API, or both combined). 
 
-2: Install dependencies with pip `pip install atproto mastodon.py json websockets`
+2: Install dependencies with pip `pip install atproto mastodon.py websockets`
 
 3: Add your api keys. Do so on lines 8+9 for the AT or AP only version or lines 9-12 for the version that posts on both. 
 
